@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>Project - New Labor Pension Fund | JL's Coding Notes</title><meta name="description" content="Project - New Labor Pension Fund"><meta name="keywords" content="jQuery,AJAX,Bootstrap,Chart.js,skrollr"><meta name="author" content="Jane Lin"><meta name="copyright" content="Jane Lin"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/Logo-JL.PNG"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Project - New Labor Pension Fund"><meta name="twitter:description" content="Project - New Labor Pension Fund"><meta name="twitter:image" content="https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"><meta property="og:type" content="article"><meta property="og:title" content="Project - New Labor Pension Fund"><meta property="og:url" content="http://yoursite.com/2020/02/13/1581540253/"><meta property="og:site_name" content="JL's Coding Notes"><meta property="og:description" content="Project - New Labor Pension Fund"><meta property="og:image" content="https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://yoursite.com/2020/02/13/1581540253/"><link rel="prev" title="Project - Lottery Number Generator" href="http://yoursite.com/2020/02/13/1581541102/"><link rel="next" title="Project - Moment.js Cheat Sheet" href="http://yoursite.com/2020/02/13/1581539741/"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-153939242-1', 'auto');
+ga('send', 'pageview');
+</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查詢的內容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '鍵將本頁加入書籤'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  isHome: false,
+  isPost: true
+  
+}</script><meta name="generator" content="Hexo 4.2.0"></head><body><header> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">JL's Coding Notes</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div></div></span><span class="pull_right" id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div></header><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/Logo-JL.PNG" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">5</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">標籤</div><div class="length_num">12</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分類</div><div class="length_num">1</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">目錄</div><div class="sidebar-toc__content"><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#Demo"><span class="toc_mobile_items-text">Demo</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#前言"><span class="toc_mobile_items-text">前言</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#簡介"><span class="toc_mobile_items-text">簡介</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#資料來源"><span class="toc_mobile_items-text">資料來源</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#使用工具或技術"><span class="toc_mobile_items-text">使用工具或技術</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#過程"><span class="toc_mobile_items-text">過程</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#問題與解決"><span class="toc_mobile_items-text">問題與解決</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#問題一：-jQuery-怎麼動態產生表格"><span class="toc_mobile_items-text">問題一： jQuery 怎麼動態產生表格</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#問題二：如何用-AJAX-取得的資料繪製-Chart-js-折線圖"><span class="toc_mobile_items-text">問題二：如何用 AJAX 取得的資料繪製 Chart.js 折線圖</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#問題三：將投資股票依比重大小排序"><span class="toc_mobile_items-text">問題三：將投資股票依比重大小排序</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#問題四：skrollr-無法正常呈現效果"><span class="toc_mobile_items-text">問題四：skrollr 無法正常呈現效果</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#後記"><span class="toc_mobile_items-text">後記</span></a></li></ol></div></div></div><div id="body-wrap"><div id="web_bg" data-type="color"></div><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目錄</div><div class="sidebar-toc__progress"><span class="progress-notice">你已經讀了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Demo"><span class="toc-text">Demo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#簡介"><span class="toc-text">簡介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#資料來源"><span class="toc-text">資料來源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用工具或技術"><span class="toc-text">使用工具或技術</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#過程"><span class="toc-text">過程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#問題與解決"><span class="toc-text">問題與解決</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#問題一：-jQuery-怎麼動態產生表格"><span class="toc-text">問題一： jQuery 怎麼動態產生表格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#問題二：如何用-AJAX-取得的資料繪製-Chart-js-折線圖"><span class="toc-text">問題二：如何用 AJAX 取得的資料繪製 Chart.js 折線圖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#問題三：將投資股票依比重大小排序"><span class="toc-text">問題三：將投資股票依比重大小排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#問題四：skrollr-無法正常呈現效果"><span class="toc-text">問題四：skrollr 無法正常呈現效果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#後記"><span class="toc-text">後記</span></a></li></ol></div></div></div><main id="content-outer"><div id="top-container" style="background-image: url(https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80)"><div id="post-info"><div id="post-title"><div class="posttitle">Project - New Labor Pension Fund</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 發表於 2020-02-13<span class="post-meta__separator">|</span><i class="fa fa-history fa-fw" aria-hidden="true"></i> 更新於 2020-02-13</time><span class="post-meta__separator">|</span><span><i class="fa fa-inbox post-meta__icon fa-fw" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Project/">Project</a></span><div class="post-meta-wordcount"><div class="post-meta-pv-cv"><span><i class="fa fa-eye post-meta__icon fa-fw" aria-hidden="true"> </i>閲讀量:</span><span id="busuanzi_value_page_pv"></span><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon fa-fw" aria-hidden="true"></i><span>評論數:</span><a href="/2020/02/13/1581540253/#post-comment"><span class="disqus-comment-count" data-disqus-url="http://yoursite.com/2020/02/13/1581540253/"></span></a></div></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><html><head></head><body><p><a href="https://i.imgur.com/q4VjnzN.jpg" target="_blank" rel="noopener" data-fancybox="group" data-caption="新制勞工退休基金經營概況" class="fancybox"><img alt="新制勞工退休基金經營概況" title="新制勞工退休基金經營概況" data-src="https://i.imgur.com/q4VjnzN.jpg" class="lazyload"></a></p>
+<h2 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h2><ul>
+<li>Demo：<a href="https://as60160.github.io/New-Labor-Pension-Fund/" target="_blank" rel="noopener">https://as60160.github.io/New-Labor-Pension-Fund/</a></li>
+<li>Code：<a href="https://github.com/as60160/New-Labor-Pension-Fund" target="_blank" rel="noopener">https://github.com/as60160/New-Labor-Pension-Fund</a></li>
+</ul>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在政府資料開放平臺逛到投資理財類別時，看到新制勞工退休基金每月收益。前段時間，新聞總是提到新制勞工退休基金這幾個月的收益不錯，加上我之前也有自提退休金，就好奇這幾個月的收益到底有多好。由於這些資料直接看並不直覺，於是決定將它畫成圖表，連同相關資訊一起觀察。</p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>藉由視覺化的方式觀察：</p>
+<ul>
+<li>新制勞工退休基金近一年來每個月的操作收益率與保證收益率。</li>
+<li>新制勞工退休基金歷年的操作收益與保證收益。</li>
+<li>新制勞工退休基金投資的股票類型以及投資比例。</li>
+</ul>
+<h3 id="資料來源"><a href="#資料來源" class="headerlink" title="資料來源"></a>資料來源</h3><p>資料取自於<a href="https://data.gov.tw/datasets/search?qs=tid:6410+%E5%8B%9E%E5%B7%A5%E9%80%80%E4%BC%91%E5%9F%BA%E9%87%91" target="_blank" rel="noopener">政府資料開放平臺</a>，搜尋關鍵字為 「勞工退休基金」。</p>
+<h3 id="使用工具或技術"><a href="#使用工具或技術" class="headerlink" title="使用工具或技術"></a>使用工具或技術</h3><ul>
+<li>Bootstrap</li>
+<li>jQuery</li>
+<li>Chart.js</li>
+<li>skrollr</li>
+</ul>
+<h2 id="過程"><a href="#過程" class="headerlink" title="過程"></a>過程</h2><p>因為這次的練習主要在 API 的串接，所以使用 Bootstrap 來排版跟架構內容，搭配 jQuery 使用 AJAX ，再以 Chart.js 繪製圖形讓資料視覺化，最後用 skrollr 加上一點視差滾動效果，讓頁面不至於太過單調。</p>
+<p>進行到畫表格的時候，琢磨了一下 jQuery 動態產生表格的程式碼該怎麼寫，畢竟表格用到的標籤多，而且各有其功能與意義。想到之前曾看過別人做九九乘法表的表格，就去找來看撰寫邏輯，這才將思路理清。</p>
+<p>接著將 AJAX 載入的資料用 Chart.js 繪製出來。由於這是我第一次用 Chart.js，閱讀了 Chart.js 官方文件，以及其他開發者用 AJAX 取得的資料繪製 Chart.js 圖形的紀錄文章，歸納執行步驟如下：</p>
+<ol>
+<li>先引用 Chart.js 的 CDN </li>
+<li>在 HTML 加上 <code>canvas</code> 定義圖形位置</li>
+<li>在 JavaScript 使用 AJAX 取得資料 </li>
+<li>透過 for 迴圈將取得的資料推到建立的空陣列中 (X 軸標籤、折線圖資料)</li>
+<li>取得 Canvas 的內容</li>
+<li>建構圖表、將資料指派到對應位置，並設置圖表的各項屬性與值</li>
+</ol>
+<p>不過，範例都是一組資料，也就是說，折線圖中只有一條線，但我想放兩組資料，產生兩條線去互相比較、看走向，在官方文件中卻沒找到，一時不知道該從哪裡下手。</p>
+<p>後來看到 <a href="https://www.chartjs.org/samples/latest/" target="_blank" rel="noopener">Chart.js Samples</a> 的範例中有兩條線的折線圖，去找了 GitHub 內對應的程式碼來看，才明白如果要在裡面放兩組資料，只要在 datasets 中用陣列放兩組物件，分別設置資料即可。</p>
+<p>節錄部分程式碼整理如下：</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">$.ajax({</span><br><span class="line">    url: <span class="string">"url"</span>,</span><br><span class="line">    success: <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>{</span><br><span class="line">      <span class="keyword">var</span> responseData = res.result.records;</span><br><span class="line">      <span class="keyword">var</span> labels = [];</span><br><span class="line">      <span class="keyword">var</span> dataset1 = [];</span><br><span class="line">      <span class="keyword">var</span> dataset2 = [];</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 將取得的資料推入陣列</span></span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i < responseData.length; i++) {</span><br><span class="line">        <span class="keyword">var</span> month = responseData[i].月別;</span><br><span class="line">        <span class="keyword">var</span> rateOfInvestment = responseData[i].收益率;</span><br><span class="line">        <span class="keyword">var</span> rateOfGuarantee = responseData[i].保證收益率;</span><br><span class="line">        labels.push(month);</span><br><span class="line">        dataset1.push(rateOfInvestment);</span><br><span class="line">        dataset2.push(rateOfGuarantee);</span><br><span class="line">      }</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 繪製折線圖</span></span><br><span class="line">      <span class="keyword">var</span> ctx = $(<span class="string">"#chartForNewByMonth"</span>);</span><br><span class="line">      <span class="keyword">var</span> chart = <span class="keyword">new</span> Chart(ctx, {</span><br><span class="line">        type: <span class="string">"line"</span>,</span><br><span class="line">        data: {</span><br><span class="line">          labels: labels,</span><br><span class="line">          datasets: [{</span><br><span class="line">            label: <span class="string">"收益率"</span>,</span><br><span class="line">            data: dataset1,</span><br><span class="line">            borderColor: <span class="string">"#1769ff"</span>,</span><br><span class="line">            fill: <span class="literal">false</span></span><br><span class="line">          }, {</span><br><span class="line">            label: <span class="string">"保證收益率"</span>,</span><br><span class="line">            data: dataset2,</span><br><span class="line">            borderColor: <span class="string">"#70b29c"</span>,</span><br><span class="line">            fill: <span class="literal">false</span></span><br><span class="line">          }]</span><br><span class="line">        },</span><br><span class="line">        options: {</span><br><span class="line">          responsive: <span class="literal">true</span>,</span><br><span class="line">        }</span><br><span class="line">      })</span><br><span class="line">    }</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure></div>
+
+<p>繪製第三部分國內投資股票時，因為資料筆數多，表格不好呈現，所以只顯示折線圖。為了更好看出這些股票的投資比例高低，在繪製之前先將取得的資料進行了排序，然後才繪製圖形。</p>
+<p>最後，因為覺得整體過於單調，所以用 skrollr 加上一點視差滾動效果。但滑鼠滾著滾著卻發現，只有「每月經營概況」那邊有反應，「年度經營概況」跟「股票類別」沒反應。</p>
+<p>因為查了一陣子仍然看不出問題在哪裡，就到臉書的前端社團詢問。才知道這是因為在 AJAX 拿到資料繪製圖表之前，skrollr 已經完成 scroll 事件綁定，這時候 DOM 還沒有圖表的元素及高度。如果要解決這個問題，在每個 AJAX 繪圖之後加上 <code>s.refresh()</code> 就能看到效果了。</p>
+<p>在這之前，有網友回饋視窗大小變化後，「年度經營概況」跟「股票類別」就會有反應。會這樣是因為視窗縮放時，skrollr 會重新計算高度，並且呼叫 refresh API。</p>
+<h2 id="問題與解決"><a href="#問題與解決" class="headerlink" title="問題與解決"></a>問題與解決</h2><p>製作這個作品時，我遇到的問題及解決方式整理如下：</p>
+<h3 id="問題一：-jQuery-怎麼動態產生表格"><a href="#問題一：-jQuery-怎麼動態產生表格" class="headerlink" title="問題一： jQuery 怎麼動態產生表格"></a>問題一： jQuery 怎麼動態產生表格</h3><p>進行到畫表格的時候，因為表格用到的標籤多，而且各有其功能與意義。所以怎麼用 jQuery 動態產生表格讓我思索了一番。</p>
+<p>後來想起，之前曾看過別人做九九乘法表的表格，就去找來看撰寫邏輯，這才將思路理清，順手也做了一個九九乘法表出來。</p>
+<p><a href="https://i.imgur.com/5FhocXF.png" target="_blank" rel="noopener" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://i.imgur.com/5FhocXF.png" class="lazyload"></a></p>
+<p>參考： <a href="https://books.google.com.tw/books?id=zDawBAAAQBAJ&pg=SA3-PA24&dq=jquery+%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8&hl=zh-TW&sa=X&ved=0ahUKEwi0i-3TwY3mAhVpF6YKHRKFARsQ6AEIKjAA#v=onepage&q=jquery%20%E4%B9%9D%E4%B9%9D%E4%B9%98%E6%B3%95%E8%A1%A8&f=false" target="_blank" rel="noopener">JavaScript與jQuery網頁設計範例教本 (電子書)</a></p>
+<h3 id="問題二：如何用-AJAX-取得的資料繪製-Chart-js-折線圖"><a href="#問題二：如何用-AJAX-取得的資料繪製-Chart-js-折線圖" class="headerlink" title="問題二：如何用 AJAX 取得的資料繪製 Chart.js 折線圖"></a>問題二：如何用 AJAX 取得的資料繪製 Chart.js 折線圖</h3><p>第一次用 Chart.js 繪圖，所以去找官方文件研究其安裝跟使用方式。不過，官方範例中使用的圖形資料都是寫死的，而且只有一條線。但我希望政府資料開放平臺上的資料更新時，我的網頁上的圖形跟資料能透過 AJAX 隨之改變，而且裡面可以放兩組資料進去觀察。</p>
+<p>查了幾篇其他開發者的文章後，看到最簡單的方式是先建立空陣列，用 for 迴圈將資料依序推進去，然後再將這些陣列放到 Chart.js 對應的位置。</p>
+<p>再來要解決放兩組資料的問題，我在 <a href="https://www.chartjs.org/samples/latest/" target="_blank" rel="noopener">Chart.js Samples</a> 看到範例中有兩條線的折線圖，去找了 GitHub 內對應的程式碼來看，才明白如果要在裡面放兩組資料，只要在 datasets 中用陣列放兩組物件，分別設置資料即可。</p>
+<p>參考：</p>
+<ul>
+<li><a href="https://www.chartjs.org/docs/latest/getting-started/" target="_blank" rel="noopener">Chart.js Docs</a></li>
+<li><a href="https://github.com/chartjs/Chart.js/blob/master/samples/charts/line/basic.html" target="_blank" rel="noopener">Chart.js line chart basic sample</a></li>
+<li><a href="http://www.voidcn.com/article/p-hjsnamyq-bmd.html" target="_blank" rel="noopener">Chart.js 通过AJAX请求JSON数据来绘制图表</a></li>
+<li><a href="https://github.com/chartjs/Chart.js/blob/master/samples/charts/line/basic.html" target="_blank" rel="noopener">Chart.js/samples/charts/line/basic</a></li>
+</ul>
+<h3 id="問題三：將投資股票依比重大小排序"><a href="#問題三：將投資股票依比重大小排序" class="headerlink" title="問題三：將投資股票依比重大小排序"></a>問題三：將投資股票依比重大小排序</h3><p>繪製第三部分國內投資股票時，原本的資料順序是依股票類型排序的，但這樣一來，除了電子產業、金融產業，以及塑膠工業較為明顯之外，其他的股票類型難以一眼看出比例多寡。</p>
+<p>為了更輕易看出這些股票的投資比例高低，我在繪圖之前先將取得的資料依投資比例排序。不過因為資料比較多層，一時轉不過來要怎麼將這些資料排序。</p>
+<p>後來發現是我想得太複雜了，同樣用 <code>sort()</code> 搭配函式即可。只不過進行判斷時，要帶上想排序的屬性名稱，這樣就能比較那個屬性的值了。</p>
+<p>範例：</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> rank = scores.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>{</span><br><span class="line">    <span class="keyword">return</span> a.score < b.score ? <span class="number">1</span> : <span class="number">-1</span></span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure></div>
+
+<p>參考： <a href="http://www.eion.com.tw/Blogger/?Pid=1170" target="_blank" rel="noopener">JavaScript 陣列元素順序重新排序 sort()</a></p>
+<h3 id="問題四：skrollr-無法正常呈現效果"><a href="#問題四：skrollr-無法正常呈現效果" class="headerlink" title="問題四：skrollr 無法正常呈現效果"></a>問題四：skrollr 無法正常呈現效果</h3><p>加上 skrollr 後使用發現，只有「每月經營概況」那邊有視差滾動效果，「年度經營概況」跟「股票類別」沒反應。</p>
+<p>因為查了一陣子仍然找不出問題在哪裡，就到臉書的前端社團詢問。才知道這是因為在 AJAX 拿到資料繪製圖表之前，skrollr 已經完成 scroll 事件綁定，這時候 DOM 還沒有圖表的元素及高度。如果要解決這個問題，在每個 AJAX 繪圖之後加上 <code>s.refresh()</code> 就能看到效果了。</p>
+<p>去 skrollr GitHub 找了 README 文件裡，有關 refresh API 的說明來看：</p>
+<p><a href="https://i.imgur.com/sAp0003.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="refresh API" class="fancybox"><img alt="refresh API" title="refresh API" data-src="https://i.imgur.com/sAp0003.png" class="lazyload"></a></p>
+<p>裡面提到，refresh API 會重新解析所有給定的元素，如果小括號內沒有給定元素，則再次解析文檔中所有元素。</p>
+<p>這個 API 適合在以下幾種情況使用：</p>
+<ul>
+<li>當元素使用 “relative” 模式且需要被更新的時候</li>
+<li>資料屬性是動態操作的</li>
+<li>在 DOM 增加新元素，且新元素會受到 skrollr 控制</li>
+</ul>
+<p>以下為蒐集到的使用 refresh API 的寫法</p>
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = skrollr.init();</span><br><span class="line"></span><br><span class="line"><span class="comment">//........</span></span><br><span class="line"></span><br><span class="line">s.refresh($(<span class="string">"#home-slides div"</span>));</span><br></pre></td></tr></tbody></table></figure></div>
+
+<div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Add one element dynamically</span></span><br><span class="line"><span class="keyword">var</span> newElement = $(</span><br><span class="line">  <span class="string">'<div id="dynamic" data-0="bottom:0px;" data-250="bottom:100px;">TEST</div>'</span></span><br><span class="line">).appendTo(<span class="string">'body'</span>);</span><br><span class="line">s.refresh(newElement[<span class="number">0</span>]);</span><br></pre></td></tr></tbody></table></figure></div>
+
+<p>此外，有網友回饋視窗大小變化後，「年度經營概況」跟「股票類別」就會有效果了。會這樣是因為視窗縮放時，skrollr 會重新計算高度，並且呼叫 refresh API。</p>
+<p>參考：</p>
+<ul>
+<li><a href="https://github.com/Prinzhorn/skrollr/blob/master/README.md#refreshelements" target="_blank" rel="noopener">skrollr refresh([elements])</a></li>
+<li><a href="https://github.com/Prinzhorn/skrollr/issues/114" target="_blank" rel="noopener">Refresh() not working #114</a></li>
+</ul>
+<h2 id="後記"><a href="#後記" class="headerlink" title="後記"></a>後記</h2><p>畫成圖表之後去看，這幾個月的收益率確實節節攀升，對於勞工們來說是福音。</p>
+<p><a href="https://i.imgur.com/baHOcZQ.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="每月經營概況" class="fancybox"><img alt="每月經營概況" title="每月經營概況" data-src="https://i.imgur.com/baHOcZQ.png" class="lazyload"></a></p>
+<p>年度的部分可看出，較差的幾年正好逢股災，收益不好也在所難免。其它年度的收益則優於保證收益率。</p>
+<p><a href="https://i.imgur.com/QKQHolM.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="年度經營概況" class="fancybox"><img alt="年度經營概況" title="年度經營概況" data-src="https://i.imgur.com/QKQHolM.png" class="lazyload"></a></p>
+<p>而透過投資股票類別能看到，新制勞工退休基金在國內投資的股票，多半集中在起伏較大的電子產業，然後是穩定的金融保險類股。</p>
+<p><a href="https://i.imgur.com/Ntxnzqw.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="國內投資股票類別" class="fancybox"><img alt="國內投資股票類別" title="國內投資股票類別" data-src="https://i.imgur.com/Ntxnzqw.png" class="lazyload"></a></p>
+<p>考慮過把舊制勞退基金的資料也一起放進來，但舊制的每月收益不知為何只提供最近一個月的資料，再加上舊制歷史悠久，年度資料過多，如何呈現是個問題。其投資股票類別的比例也與新制差異不大，只有在指數股票型基金的投資比例 4.x% 相較新制的 0.2% 高很多。至於多出來的這些，主要是減少電子產業類別的比例來的。</p>
+<p>本來想說這些資料是透過 AJAX 取得的，那麼只要政府資料開放平臺更新，這個頁面上的資料也會隨之更新、不怕過時。但是，等到次月政府資料開放平臺上的資料更新後，打開來看發現除了年度收益的資料仍在，每月收益跟股票投資類別的資料都沒有顯示出來。</p>
+<p>到政府資料開放平臺確認後發現，次月新資料的 API 網址路徑位置和我當時取得的不同。於是，舊的不能用，新的不會來。只好改為下載 JSON 格式的檔案替代網址，以免下個月資料更新時，網頁又撈不到資料可用。</p>
+<p>雖然政府資料開放平臺更新時，我的網頁資料無法自動隨之更新讓我覺得遺憾，但至少一開始將資料視覺化的目的有達到，也算滿足了。</p>
+</body></html></div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Jane Lin</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章鏈接: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/02/13/1581540253/">http://yoursite.com/2020/02/13/1581540253/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版權聲明: </span><span class="post-copyright-info">本博客所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 許可協議。轉載請註明來自 <a href="http://yoursite.com" target="_blank">JL's Coding Notes</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/jQuery/">jQuery    </a><a class="post-meta__tags" href="/tags/AJAX/">AJAX    </a><a class="post-meta__tags" href="/tags/Bootstrap/">Bootstrap    </a><a class="post-meta__tags" href="/tags/Chart-js/">Chart.js    </a><a class="post-meta__tags" href="/tags/skrollr/">skrollr    </a></div><div class="post_share"></div></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2020/02/13/1581541102/"><img class="prev_cover lazyload" data-src="https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" onerror="onerror=null;src='/img/404.jpg'"><div class="label">上一篇</div><div class="prev_info"><span>Project - Lottery Number Generator</span></div></a></div><div class="next-post pull_right"><a href="/2020/02/13/1581539741/"><img class="next_cover lazyload" data-src="https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>Project - Moment.js Cheat Sheet</span></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 評論</span></div><div id="disqus_thread"></div><script>var unused = null;
+var disqus_config = function () {
+  this.page.url = 'http://yoursite.com/2020/02/13/1581540253/';
+  this.page.identifier = '2020/02/13/1581540253/';
+  this.page.title = 'Project - New Labor Pension Fund';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://" + 'jls-coding-notes' +".disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script></div></div></main><footer id="footer" style="background-image: url(https://images.unsplash.com/photo-1572177812156-58036aae439c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2020 By Jane Lin</div><div class="framework-info"><span>Power by </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="閲讀模式"></i><i class="fa fa-plus" id="font_plus" title="放大字體"></i><i class="fa fa-minus" id="font_minus" title="縮小字體"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="簡繁轉換" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜間模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="設置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直達評論"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目錄" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到頂部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>Powered by</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
